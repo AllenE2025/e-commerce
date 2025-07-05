@@ -27,6 +27,7 @@ export default function Home() {
             </p>
           </div>
         </div>
+
         {/* Right Side: Buttons */}
         <div className="flex flex-col md:flex-row gap-4 items-center">
           <button
@@ -74,16 +75,15 @@ export default function Home() {
                   Headset
                 </button>
               </Link>
-              <Link href="/mouse">
-                <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-purple-100">
-                  Mouse
-                </button>
-              </Link>
+
+              <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-purple-100">
+                Mouse
+              </button>
             </div>
           </div>
         )}
       </div>
-      <p>Home</p>
+      <p>Mouse</p>
     </div>
   );
 }

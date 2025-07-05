@@ -12,7 +12,7 @@ export default function Home() {
     <div className="w-screen h-screen bg-gradient-to-br from-black to-purple-700 flex flex-col items-start p-6">
       {/* Main Content Area */}
       <div className="w-full bg-white/10 backdrop-blur-md rounded-2xl shadow-xl text-center p-10 flex flex-col md:flex-row justify-between items-center gap-">
-        <div className="flex items-center">
+         <div className="flex items-center">
           <Link href="/">
             <Image src="/logo.png" alt="logo" height={100} width={100} />
           </Link>
@@ -27,6 +27,7 @@ export default function Home() {
             </p>
           </div>
         </div>
+
         {/* Right Side: Buttons */}
         <div className="flex flex-col md:flex-row gap-4 items-center">
           <button
@@ -69,11 +70,11 @@ export default function Home() {
                   Keyboard
                 </button>
               </Link>
-              <Link href="/headset">
-                <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-purple-100">
-                  Headset
-                </button>
-              </Link>
+
+              <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-purple-100">
+                Headset
+              </button>
+
               <Link href="/mouse">
                 <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-purple-100">
                   Mouse
@@ -83,7 +84,7 @@ export default function Home() {
           </div>
         )}
       </div>
-      <p>Home</p>
+      <p>Headset</p>
     </div>
   );
 }

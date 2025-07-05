@@ -27,6 +27,7 @@ export default function Home() {
             </p>
           </div>
         </div>
+
         {/* Right Side: Buttons */}
         <div className="flex flex-col md:flex-row gap-4 items-center">
           <button
@@ -64,11 +65,10 @@ export default function Home() {
         {isOpen && (
           <div className="absolute mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black/10 z-50">
             <div className="py-1">
-              <Link href="/keyboard">
-                <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-purple-100">
-                  Keyboard
-                </button>
-              </Link>
+              <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-purple-100">
+                Keyboard
+              </button>
+
               <Link href="/headset">
                 <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-purple-100">
                   Headset
@@ -83,7 +83,7 @@ export default function Home() {
           </div>
         )}
       </div>
-      <p>Home</p>
+      <p>Keyboard</p>
     </div>
   );
 }
