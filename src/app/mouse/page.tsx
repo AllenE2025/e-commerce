@@ -83,7 +83,44 @@ export default function Home() {
           </div>
         )}
       </div>
-      <p>Mouse</p>
+      {/* Product Showcase */}
+      <section>
+        <h2 className="text-white text-2xl font-semibold mb-4">Mouse</h2>
+        <div className="flex flex-wrap gap-6">
+          {/* Product Card */}
+          {[
+            {
+              src: "/g502x-plus-gallery-1-black.webp",
+              alt: "Logitech G502X Plus",
+              name: "Logitech G502X Plus",
+            },
+            {
+              src: "/ASUSTUFGamingM3GenII.png",
+              alt: "ASUS TUF Gaming M3 Gen II",
+              name: "ASUS TUF Gaming M3 Gen II",
+            },
+            {
+              src: "/high_resolution-g304_black_bty1.png",
+              alt: "Logitech G304 Black",
+              name: "Logitech G304 Black",
+            },
+          ].map((product, idx) => (
+            <div
+              key={idx}
+              className="bg-white/10 backdrop-blur-sm p-4 rounded-xl shadow-md text-center hover:scale-105 transition-transform duration-300"
+            >
+              <Image
+                src={product.src}
+                alt={product.alt}
+                width={300}
+                height={300}
+                className="rounded-lg mb-2"
+              />
+              <p className="text-white font-medium">{product.name}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

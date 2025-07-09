@@ -84,7 +84,44 @@ export default function Home() {
           </div>
         )}
       </div>
-      <p>Headset</p>
+ {/* Product Showcase */}
+      <section>
+        <h2 className="text-white text-2xl font-semibold mb-4">Headset</h2>
+        <div className="flex flex-wrap gap-6">
+          {/* Product Card */}
+          {[
+            {
+              src: "/headset-dell-wh3024-bk-gallery-2_1024x.webp",
+              alt: "Dell WH 3042 BK",
+              name: "Dell WH 3024 BK",
+            },
+            {
+              src: "/h390-frontview-gallery-black.webp",
+              alt: "Logitech H390",
+              name: "Logitech H390",
+            },
+            {
+              src: "/hs-a4-bh300-w-1.png",
+              alt: "A4Tech BH 300 W",
+              name: "A4Tech BH 300 W",
+            },
+          ].map((product, idx) => (
+            <div
+              key={idx}
+              className="bg-white/10 backdrop-blur-sm p-4 rounded-xl shadow-md text-center hover:scale-105 transition-transform duration-300"
+            >
+              <Image
+                src={product.src}
+                alt={product.alt}
+                width={300}
+                height={300}
+                className="rounded-lg mb-2"
+              />
+              <p className="text-white font-medium">{product.name}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
